@@ -13,10 +13,15 @@ $(document).ready(function () {
   
   arrayResult.push(foodInput, bandInput, movieInput, "dipsy", "lala", "po");
 
-  results.append("<li>" + foodInput + "</li>")
-    .append("<li>" + bandInput + "</li>")
-    .append("<li>" + movieInput + "</li>")
-    .prepend("<li>" + arrayResult[5] + "</li>");
+  arrayResult.forEach(function(listItem) {
+    results.append("<li>" + listItem + "</li>")
+  });
+
+  // old, ugly code:
+  // results.append("<li>" + foodInput + "</li>")
+  //   .append("<li>" + bandInput + "</li>")
+  //   .append("<li>" + movieInput + "</li>")
+  //   .prepend("<li>" + arrayResult[5] + "</li>");
 
   console.log(arrayResult);
   });
